@@ -12,12 +12,14 @@ function setup() {
 }
 
 function draw() {
-  background(240);
+  background(200, 150, 255);  // 캔버스 배경 색상 변경 (연한 보라색)
   for (let particle of particles) {
     particle.applyForce(gravity);
     particle.applyForce(wind);
     particle.update();
+    fill(255, 100, 150);  // 원의 색상 변경 (연한 분홍색)
     particle.show();
   }
 }
+
 
