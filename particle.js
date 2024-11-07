@@ -19,6 +19,20 @@ class Particle {
       this.acc.mult(0);
     }
   
+    edges() {
+      if (this.pos.y > height) {
+        this.vel.y *= -0.8;
+        this.pos.y = height;
+      }
+      if (this.pos.x > width) {
+        this.vel.x *= -0.8;
+        this.pos.x = width;
+      } else if (this.pos.x < 0) {
+        this.vel.x *= -0.8;
+        this.pos.x = 0;
+      }
+    }
+  
     show() {
       fill(127);
       noStroke();
