@@ -20,20 +20,19 @@ class Particle {
         this.acc.mult(0);
       }
       
-  
     edges() {
-      if (this.pos.y > height) {
-        this.vel.y *= -0.8;
-        this.pos.y = height;
+        if (this.pos.y > height) {
+          this.vel.y *= -0.8;  // 바닥에 부딪히면 반사
+          this.pos.y = height;
+        }
+        if (this.pos.x > width) {
+          this.vel.x *= -0.8;  // 화면 끝에 부딪히면 반사
+          this.pos.x = width;
+        } else if (this.pos.x < 0) {
+          this.vel.x *= -0.8;
+          this.pos.x = 0;
+        }
       }
-      if (this.pos.x > width) {
-        this.vel.x *= -0.8;
-        this.pos.x = width;
-      } else if (this.pos.x < 0) {
-        this.vel.x *= -0.8;
-        this.pos.x = 0;
-      }
-    }
   
     show() {
       fill(127);
