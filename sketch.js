@@ -3,5 +3,5 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(240);  // 밝은 색 배경으로 변경
 }
