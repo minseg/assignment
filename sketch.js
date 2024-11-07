@@ -17,6 +17,7 @@ function draw() {
     particle.applyForce(gravity);
     particle.applyForce(wind);
     particle.update();
+    particle.edges();
     fill(255, 100, 150);  // 원의 색상 변경 (연한 분홍색)
     particle.show();
   }
